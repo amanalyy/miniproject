@@ -1,0 +1,25 @@
+<p>{{user}}</p>
+
+             </div>
+             </div>
+
+            <script src="vue.js"></script>
+             <script src="pouchdb.js"></script>
+                 <script>
+                        new Vue({
+                            el: '#app',
+                            data: {
+                                user: {}
+                            },
+                            methods: {
+                                submit () {
+                                    var pouchdb = new PouchDB("http://localhost:5984/dayyy")
+                                    pouchdb.post(this.user).then((res) => {
+                                        console.log(res)
+                                    }).catch((err) => {
+                                        console.log(Error)
+                                    })
+                                }
+                            }
+                        })
+                   </script>

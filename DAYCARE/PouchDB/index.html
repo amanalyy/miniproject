@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Testing Pouchdb</title>
+</head>
+<body>
+    <div id="app">
+        <input type="text" v-model="user.name">
+        <input type="text" v-model="user.email">
+        <button @click="saveUser">Submit</button>
+        <button @click="putUser">Put</button><br>
+        <input type="text" v-model="docid">
+        <button @click="getDoc">GET DOC</button><br>
+        <button @click="getAllDocs">ALL DOCS</button>
+       
+        <div v-for="p in docs">
+            <p>Username : {{p.doc.name}}</p>
+            <p>Email: {{p.doc.email}}</p>
+        </div>
+
+        <hr>
+        <input type="text" v-model="docid">
+        <button @click="deleteDoc">DELETE</button>
+    </div>
+
+
+    <script src="vue.js"></script>
+    <script src="pouchdb.js"></script>
+    <script>
+        new Vue({
+            el: '#app',
+            data: {
+                docid: '',
+                user: {
+                    _id: 'myid'
+                },
+                docs: []
+            },
+            methods: {
+                saveUser () {
+                    var pouchdb = new PouchDB("http://localhost:5984/daycare")
+                    pouchdb.post(this.user).then(function(response){
+                        console.log(response)
+                    }).catch(function(error){
+                        console.log(error)
+                    })
+                },
+                putUser () {
+                    var pouchdb = new PouchDB("http://localhost:5984/daycare")
+                    pouchdb.put(this.user).then((response) => {
+                        console.log(response)
+                    }).catch((error) => {
+                        console.log(error)
+                    })
+                },
+                getDoc () {
+                    var pouchdb = new PouchDB("http://localhost:5984/daycare")
+                    pouchdb.get(this.docid).then((response) => {
+                        console.log(response)
+                    }).catch((error) => {
+                        console.log(error)
+                    })
+                },
+                getAllDocs () {
+                    var pouchdb = new PouchDB("http://localhost:5984/daycare")
+                    pouchdb.allDocs({include_docs: true}).then((response) => {
+                        this.docs = response.rows
+                    }).catch((error) => {
+                        console.log(error)
+                    })
+                },
+                deleteDoc () {
+                    var pouchdb = new PouchDB("http://localhost:5984/daycare")
+                    pouchdb.remove(this.docid, '1-80368b1b79e1fc6b6fee14e9a9a31813').then((response) => {
+                        console.log(response)
+                    }).catch((error) => {
+                        console.log(error)
+                    })
+                }
+            }
+        })
+    </script>
+</body>
+</html>

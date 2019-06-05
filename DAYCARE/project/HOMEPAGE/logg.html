@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>WATER</title>
+    <script type="ttext/javascript" src="vue.js"></script>
+    <link rel="stylesheet" type="text/css" media="screen" href="log.css"/>
+</head>
+<body>
+
+    <div id="databinding">
+    <div class="box">
+            <h2>LOGIN</h2>
+            <div id="app">
+            <form>
+
+                    
+                <input type="radio" name="role" value="Baby Sitter">
+                Baby Sitter <br>
+                    <input type="radio" name="role"  value="parent">
+                Parent <br><br>
+                    
+                <div class="inputBox">
+                     <label>Username</label>
+                    <input type = "text"  name="uname" required="">  <br><br>
+                   
+                    
+                </div>
+                <div class="inputBox">
+                     <label>Password</label>
+                     <input type = "password" name="Password" required="">
+
+                <br>
+                    
+                    
+                </div>
+                <input type="submit" name="" value="Submit" @click="submit"> <br><br>
+
+            
+                <br>
+
+                <label>
+                        <input type = "checkbox"
+                        checked = "checked"
+                        name = "remember"> Remember Password
+                 </label>
+                 <br>
+                
+       
+                <div class = "container">
+                    <span class= "psw"> Forgot <a href = "#">password? </a></span> <br>
+                    <span class= "psw"> Don't have an account?? <a href = "signup.html" class = "signup">Sign-up</a> </span>
+                   
+                       
+             </form>
+           

@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+ <html>
+
+    <head>
+
+        <link rel = "stylesheet" type = "text/css" href = "homepagee.css"/>  
+        <link rel = "stylesheet" type = "text/css" href = "grid.css"/>  
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+        <meta charset="utf-8" />
+        <title>HOMEPAGE</title>
+        <meta name="author" content="Manal BG"/>
+        <meta name="keywords" content="DAYCARE, BABIES">
+    
+       
+    <script src="vue.js"></script>
+    <script src="pouchdb.js"></script>
+    <script>
+        new Vue({
+            el: '#app',
+            data: {
+                user: {}
+            },
+            methods: {
+                saveUser () {
+                    var pouchdb = new PouchDB("http://localhost:5984/daycare")
+                    pouchdb.post(this.user).then(function(response){
+                        console.log(response)
+                    }).catch(function(error){
+                        console.log(error)
+                    })
+                }
+            }
+        })
+    </script>
+    </head>
+
+    <body>
+
+
+        <div class="buk">
+                <div class="center">
+                    
+                  <img src="manal.png" height:40px width:40px;>
+                    <!--<div class="box1">BUK CRECHE<br> </div> 
+                    <div class="box2"></div>-->
+                    </div>
+                    <br><br><br><br><br>
+                
+            <!--<h3>Daycare Center</h3>-->
+           
+            <br>
+        </div>
+        
+        <div class="topnav" id="myTopnav">
+       
+            <ul>
+                <li><a href="homepage.html">HOME</a></li>
+
+                <li><a href="#tour">TOUR</a></li>
+                    
+                <li><a href="#about">ABOUT</a></li>
+
+                <li><a href = #contactus>CONTACT US</a> </li>
+            </ul>
+
+        </div>
+                <!--<ul>
+                    <li><a>Map</a></li>
+                    <li><a>Address</a></li>
+                    <li><a>Email Address</a></li>
+                    <li><a>Phone numbers</a></li>
+                </ul>-->
+           
+
+            <!--<li><a>NEWS</a>
+                <ul>
+                    <li><a>Services</a></li>
+                    <li><a href="dailyus.html">DAILY US</a></li>
+                    <li><a></a></li>
+                            
+                 </ul>
+                
+            </li> -->
+       
+
+      
+    
+        <!--<-div class="slider-holder">
+                <span id="slider-image-1"></span>
+                <span id="slider-image-2"></span>
+                <span id="slider-image-3"></span>
+                <div class="image-holder">
+                    <img src="sand.jpg" class="slider-image" />
+                    <img src="mmm.jpg"  class="slider-image" />
+                    <img src="cafess.jpg" class="slider-image" />
+                </div>
+                <div class="button-holder">
+                    <a href="#slider-image-1" class="slider-change"></a>
+                    <a href="#slider-image-2" class="slider-change"></a>
+                    <a href="#slider-image-3" class="slider-change"></a>
+                </div>
+            </div>
+
+        <header>-->
+
+           
+           
+
+
+        <div class="slider">
+            
+                   
+            <a href = "log.html" class = "signin">Sign-in</a>
+           
+            
+        </div> 
+
+       
+
+        <div class="container" id="tour">
+
+              
+
+                <figure>
+                   <img id="immg" src="building.jpg">
+                   <figcaption>FRONT VIEW!!!<br>Welcome to BUK Creche</figcaption>
+               </figure>
+               
+
+              
+
+               <figure>
+                       <img id="immg" src="mmm.jpg">
+                       <figcaption>baby #5</figcaption>
+                </figure>
+
+
+                <figure>
+                    <img id="immg" src="sand.jpg">
+                    <figcaption>baby #6</figcaption>
+               </figure>
+
+              
+
+
+
+               <figure>
+                   <img id="immg"src="babyroom.jpg">
+                   <figcaption>PLAY ROOM!!!<br> Contains different toys more<br> than enough for all the kids.</figcaption>
+               </figure>
+        </div>
+
+
+        <hr>
+
+        
+
+        <div class = "CSL" id="about">
+
+            <script>
+                    var i = 0;
+                    var images = [];
+                    var time = 3000;
+        
+        
+                    images[0] = "fun.jpg"
+                    images[1] = "learn.jpg"
+                    images[2] = "out.jpg"
+                    images[3] = "pen.jpg"
+                    images[4] = "pic.jpg"
+                    
+        
+                    function changeImg() {
+                        document.slide.src = images[i];
+        
+                        if (i < images.length-1){
+                            i++;
+                        } else {
+                        i = 0;
+                        }
+        
+                        setTimeout("changeImg()", time)
+                    }
+        
+                    window.onload = changeImg;
+
+                            function myFunction() {
+                    var x = document.getElementById("myTopnav");
+                    if (x.className === "topnav") {
+                        x.className += " responsive";
+                    } else {
+                        x.className = "topnav";
+                    }   
+                }
+                    
+        
+        
+                
+            </script>
+        
+            <img name ="slide"  height= "500px">
+            
+            <article>
+                <h3>CARE, SUPERVISION AND LEARNING!!!</h3>
+                
+                <p> BUK CRETCH  is a childcare option that allows parents to drop off their 
+                    children during the day for care, supervision and learning. Daycare centers 
+                    specialize in the care of infants through preschoolers.
+                    The type and quality of care can influence many aspects of
+                    development- including memory, language development, school 
+                    readiness, maths and reading achievement, the nature of relationship 
+                    with parents and teachers, social skills, work habits.. ..... ...
+                    jnljkd jerflerk jrflerfner krfjnndnu rufnunr jsjjsjndkdjdn   jdhnjdnjdn
+                    with parents and teachers, social skills, work habits.. ..... ...
+                    sjnjsnd ejndied dniend jendeid snduednuehde jednuedeuhduewnd udhiuedeid
+                    jdncdn dinidn snieideihduhudhuhuhdb jdncdnc hdbcdbcdnc djbcjdbccbn hjbsb
+                    evelopment- including memory, language development, school 
+                    readiness, maths and reading achievement, the nature of relationship 
+                    with parents and teachers, social skills, work habits.. ..... ...
+                    jnljkd jerflerk jrflerfner krfjnndnu rufnunr jsjjsjndkdjdn   jdhnjdnjdn
+                    ndsjkndsj jsdnwna jdnjdij jdnjejdf jednhuehfiejiejiefie eihiewhdiehiew
+                    jdueuew udfuehdfueh ejdieduwehuehf jfuehfuwehfu ehfuehfue weuhfuehfw ej
+                    jenfie eunuowefiefi enfefjenfu ifnieferfi jffe efuefu jbdhs jsnjsdi jasndj
+                    sjnjsnd ejndied dniend jendeid snduednuehde jednuedeuhduewnd udhiuedeid
+                    jdncdn dinidn snieideihduhudhuhuhdb jdncdnc hdbcdbcdnc djbcjdbccbn hjbsb</p>
+                    <h3>OUR REGULAR HOURS OF OPERATION</h3>
+                    
+                <table border ="" cellspacing="0">
+                    
+                       <tr>
+                            <td>Hours of Operation</td>
+                            <td>DAYCARE OPENS</td>
+                            <td>DAYCARE CLOSES</td>
+                        </tr>
+
+                    
+         
+                   
+                    
+                        <tr>
+                            <td>MONDAYS TO SATURDAYS</td>
+                            <td>8:00 AM </td>
+                            <td>5:00 PM</td>
+                        </tr>
+                    
+                </table>
+
+
+                <h3>OUR REGULAR CHARGES</h3>
+
+                <table border ="" cellspacing="0">
+                    
+                    <tr>
+                         <td>INFANTS</td>
+                         <td>15,000 Naira per month</td>
+                     </tr>
+
+                 
+      
+                
+                 
+                     <tr>
+                         <td>TODDLRES</td>
+                         <td>10,000 Naira per month</td>
+                     </tr>
+                 
+             </table>
+
+
+
+                </article>
+
+                    
+
+                    
+             
+                       
+                         
+                            
+
+                    
+                    
+                    
+                  
+                 </p>
+            </article>
+
+           
+    
+
+        </div>
+
+        <!--<div class = "staff">
+                <h3>SOME OF OUR STAFF</h3>
+        </div>
+
+        <div class="staffinfo">
+                <figure>
+                        <img src="building.jpg" width="100px">
+                        <figcaption>FRONT VIEW!!!<br>Welcome to BUK Creche</figcaption>
+                </figure>
+                <figure>
+                    <img src="babyroom.jpg">
+                    <figcaption>PLAY ROOM!!!<br> Contains different toys more than enough for all the kids.</figcaption>
+                </figure>
+                <figure>
+                    <img src="play.jpg">
+                    <figcaption>playing is fun<br>COME AND JOIN ME</figcaption>
+                </figure>
+                <figure>
+                    <img src="cloth.jpg">
+                    <figcaption>BABY'S SHELF<br>ALWAYS NEAT AND TIDY</figcaption>
+                </figure>
+
+            </div>-->
+
+            
+            <hr>
+
+            <h2 style="text-align:center">MEET OUR TEAM</h2>
+
+    <div class= "stafff">
+
+
+
+    <div class="card">
+    <img src="h.jpg" alt="John" style="width:100%">
+    <h1>Manal BG</h1>
+    <p class="title">MANAGER</p>
+    <p> Degree in Child's Education <br>Bayero University Kano</p>
+    <div style="margin: 24px 0;">
+        <a href="#"><i class="fa fa-instagram"></i></a> 
+        <a href="#"><i class="fa fa-twitter"></i></a>  
+        <a href="#"><i class="fa fa-linkedin"></i></a>  
+        <a href="#"><i class="fa fa-facebook"></i></a> 
+    </div>
+    <p><button>Learn More</button></p>
+    </div>
+
+    <div class="card">
+        <img src="eesh.jpg" alt="John" style="width:100%">
+        <h1>Eesha HN</h1>
+        <p class="title">Head of Baby Sitters</p>
+        <p>Diploma in Child's Upbringing <br>Bayero University Kano</p>
+        <div style="margin: 24px 0;">
+        <a href="#"><i class="fa fa-instagram"></i></a> 
+        <a href="#"><i class="fa fa-twitter"></i></a>  
+        <a href="#"><i class="fa fa-snapchat"></i></a>  
+        <a href="#"><i class="fa fa-facebook"></i></a> 
+    </div>
+    <p><button>Learn More</button></p>
+    </div>
+
+    <div class="card">
+            <img src="sum.jpg" alt="John" style="width:100%">
+            <h1>Summy G</h1>
+            <p class="title">Head of Cleaners</p>
+            <p>Diploma in Environmental Sanitation <br>6th October University </p>
+            <div style="margin: 24px 0;">
+            <a href="#"><i class="fa fa-instagram"></i></a> 
+            <a href="#"><i class="fa fa-twitter"></i></a>  
+            <a href="#"><i class="fa fa-snapchat"></i></a>  
+            <a href="#"><i class="fa fa-facebook"></i></a> 
+        </div>
+        <p><button>Learn More</button></p>
+        </div>
+
+    </div>
+
+    
+
+
+       
+                
+                 <!--<figure>
+                    <img id="immg" src="play.jpg">
+                    <figcaption>playing is fun<br>COME AND JOIN ME</figcaption>
+                </figure>
+
+              
+
+               <figure>
+                    <img id="immg" src="cloth.jpg">
+                    <figcaption>BABY'S SHELF<br>ALWAYS NEAT AND TIDY</figcaption>
+                </figure>
+
+                
+
+                <figure>
+                     <img id="immg" src="cloth.jpg">
+                     <figcaption>BABY'S SHELF<br>ALWAYS NEAT AND TIDY</figcaption>
+                <figure>-->
+            
+            </div>
+            
+                
+        </div>
+        <!--<figure id="vid">
+                    <embed src="SM.MP4">
+                </figure>-->
+
+
+           
+           
+        <!-- </header> -->
+
+        <br>
+        <br>
+        <hr>
+        <h2 style="text-align:center">CONTACT</h2>
+
+        <div class = "contactus" id ="contactus">
+        <p>      
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3902.8679955962016!2d8.473139550322548!3d11.983634691467701!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x11ae7fda1908f949%3A0xe673c6f6caa77e28!2sBayero+University+Kano!5e0!3m2!1sen!2sng!4v1540821950284" 
+        width="600" height="400" frameborder="0" style="border:0" allowfullscreen></iframe> 
+        </p>
+        <div class="contact">
+            <br>
+           
+       
+        
+            <p><strong>ADDRESS</strong>
+            <br> BUK HGYJG HGU
+            <br> jgkuhjgiugu hgbyu
+            <br> kjh hfbh hbdj jbdh
+            <br> jdn jnfdjkenuj jfbju
+        </p>
+
+        <p><strong>E-MAIL ADDRESS </strong><br>amanalyy@gmail.com <br> bukcreche@yahoo.com</p>
+
+        <p><strong>PHONE NUMBERS </strong><br>08096398960<br> 0000000000</p>
+
+        <div class="contactuss">
+            <a href = "contactus.html"><p><strong>CONTACT US</strong></p></a>
+         </div>
+        </div>
+
+        </div>
+
+        <p><marquee>hbjkwebkewjbekj hewbye hjeveyv hjevyhevw hevdyhev hevydev hevyjev</marquee></p>
+
+        <footer>&copy; MB 2018 </footer>
+
+
+        <script>
+            function myFunction() {
+            var x = document.getElementById("myTopnav");
+            if (x.className === "topnav") {
+                x.className += " responsive";
+            } else {
+                x.className = "topnav";
+            }   
+        }
+        </script>
+
+    </body>
+
+</html>
